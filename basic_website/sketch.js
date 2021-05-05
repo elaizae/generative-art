@@ -1,9 +1,8 @@
 /* 👇 Start writing your p5.js code here */
 
 
- // rect (x, y, w, [h])
- // triangle(x1, y1, x2, y2, x3, y3)
-
+let button;
+let permissionGranted = false;
  
  var x, y, w, h;
 
@@ -44,11 +43,53 @@ var i = 0
    } 
    */
 
-   
+   // device
+   if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
+     //ios 13
+
+     DeviceOrientationEvent.requestPermission()
+     .catch(() => {
+
+      let button = createButton("click to allow acces to sensors"); 
+    button.style("font-size","24px");
+     button.center();
+     button.mousePressed( requestAccess ); 
+     
+     throw error;
+    })
+
+    .then (() => {
+      permissionGranted = true;
+    })
+     // button.createButton("click to allow acces to sensors");
+     
+
+   } else {
+     //non 13
+     textSize(48);
+     text("non ios13 device, 100, 100");
+   }
+  }
+
+  function requestAccess() {
+    DeviceOrientationEvent.requestPermission()
+  .then(response=> {
+    if (response == 'granted'){
+      permissionGranted = true;
+    } else {
+      permissionGranted = false;
+    }
+  })
+  .catch(console.error);
+
+this.remove();
+}
+
+
 
  function draw() {
-
- }
+if (permissionGranted) return;
+ 
 
  
 
@@ -83,9 +124,11 @@ var i = 0
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
- }
- 
-} function deviceShaken(){
+ } 
+}
+
+
+function deviceShaken(){
   redraw();
 }
   
