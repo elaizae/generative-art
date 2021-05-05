@@ -3,10 +3,10 @@
 # Procesverslag
 
 ## Over
-* **Naam:** `voornaam + achternaam`
-* **Klas:** `vid-1/vid-2`
+* **Naam:** `Elaiza Elizabeth`
+* **Klas:** `Vid-2a`
 * **Minor:** `Visual Interface Design`
-* **Favoriete dier:** `Zeeotters zijn te gek!`
+* **Favoriete dier:** ``
 * **Startniveau:** `blauw/rood/zwart`
 
 ## Concept

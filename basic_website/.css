@@ -5,3 +5,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+}
+
+#canvas{
+  position: absolute;
+  margin: auto;
+  width: 30%;
+  background-color: blue;
+}
+
+.pos{
+margin: 2em;
+}

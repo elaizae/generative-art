@@ -1,0 +1,20 @@
+/* You don't really have to touch this style.css file. Most of the styling of the canvas is controlled via the sketch.js */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color:#F3F3F3;
+}
+
+
+
+.pos{
+    display: flex;
+    z-index: 100000;
+margin: -40em 0 40em 70em;
+}
