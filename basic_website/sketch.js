@@ -20,6 +20,7 @@ let randomColor;
 
  function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
+  myCanvas.parent("frame");
   noLoop();
   background(255);
     
@@ -84,11 +85,16 @@ var i = 0
      rect(x, y, w, h);
    }
  }
- 
-} 
-function deviceShaken(){
+
+ function deviceShaken(){
   redraw();
 }
+}
+
+ function deviceShaken (){
+  redraw();
+}
+
   
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
