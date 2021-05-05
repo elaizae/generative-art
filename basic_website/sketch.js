@@ -1,9 +1,7 @@
 /* 👇 Start writing your p5.js code here */
 
 
-let button;
-let permissionGranted = false;
- 
+
  var x, y, w, h;
 
 // amount of shapes for each shape 
@@ -11,11 +9,13 @@ let permissionGranted = false;
  var shapesAmount2 = 5;
  var shapesAmount3 = 0;
 
+let button;
+let permissionGranted = false;
 // array of all my colors
 let someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67"];
-
 let randomColor;
 
+ 
 
  function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
@@ -47,17 +47,15 @@ var i = 0
    if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
      //ios 13
 
-     DeviceOrientationEvent.requestPermission()
+      DeviceOrientationEvent.requestPermission()
      .catch(() => {
 
-      let button = createButton("click to allow acces to sensors"); 
-    button.style("font-size","24px");
+     let button = createButton("click to allow acces to sensors"); 
+     button.style("font-size", "24px");
      button.center();
      button.mousePressed( requestAccess ); 
-     
      throw error;
     })
-
     .then(() => {
 
       permissionGranted = true;
@@ -68,8 +66,8 @@ var i = 0
    } else {
      //non 13
      textSize(48);
-     //text("non ios13 device, 100, 100");
-     permissionGranted = true;
+     text("non ios13 device, 100, 100");
+    
    }
  }
 
