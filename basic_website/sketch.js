@@ -71,7 +71,7 @@ var i = 0
      //text("non ios13 device, 100, 100");
      permissionGranted = true;
    }
-  }
+ }
 
   function requestAccess() {
     DeviceOrientationEvent.requestPermission()
@@ -86,6 +86,7 @@ var i = 0
 
 this.remove();
 }
+
 
 
 
