@@ -88,12 +88,10 @@ var i = 0
 
  function deviceShaken(){
   redraw();
-}
-}
+ }}
 
- function deviceShaken (){
-  redraw();
-}
+
+ 
 
   
 function windowResized() {
