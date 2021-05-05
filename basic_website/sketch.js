@@ -58,7 +58,8 @@ var i = 0
      throw error;
     })
 
-    .then (() => {
+    .then(() => {
+
       permissionGranted = true;
     })
      // button.createButton("click to allow acces to sensors");
@@ -67,13 +68,14 @@ var i = 0
    } else {
      //non 13
      textSize(48);
-     text("non ios13 device, 100, 100");
+     //text("non ios13 device, 100, 100");
+     permissionGranted = true;
    }
   }
 
   function requestAccess() {
     DeviceOrientationEvent.requestPermission()
-  .then(response=> {
+  .then(response => {
     if (response == 'granted'){
       permissionGranted = true;
     } else {
@@ -88,7 +90,7 @@ this.remove();
 
 
  function draw() {
-if (permissionGranted) return;
+if (!permissionGranted) return;
  
 
  
