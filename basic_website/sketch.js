@@ -86,13 +86,40 @@ let randomColor;
    }
  }
 
+// Sources for the motion permission code 
+// I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
+
+ if (typeof DeviceMotionEvent.requestPermission === 'function' &&
+typeof DeviceOrientationEvent.requestPermission === 'function'
+ ) {
+ // iOS 13+
+  askButton = createButton('Permission');
+  askButton.size(windowWidth*6/8, windowHeight/8);
+  askButton.position(windowWidth/2 - drumButton.width/2, windowHeight/2);
+  askButton.mousePressed(() => {
+    DeviceMotionEvent.requestPermission()
+    .then(response => {
+      if (response === 'granted') {
+        window.addEventListener('devicemotion', deviceMotionHandler, true);
+      }
+    });
+
+    DeviceOrientationEvent.requestPermission()
+    .then(response => {
+    if (response === 'granted') {
+      window.addEventListener('deviceorientation', deviceTurnedHandler, true)
+    }
+  })
+
+  .catch(console.error);
+  });
+ }
 
  function deviceShaken() {
   redraw();
 }
- 
- 
-setShakeThreshold(50);
+
+
   
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
