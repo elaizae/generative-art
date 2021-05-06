@@ -87,12 +87,12 @@ let randomColor;
  }
 
 
- function deviceshaken() {
+ function deviceShaken() {
   redraw();
 }
  
  
-
+setShakeThreshold(50);
   
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
