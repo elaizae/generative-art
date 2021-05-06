@@ -132,8 +132,7 @@ this.remove();
   }
 
  function deviceshaken() {
-   background(255);
-  redraw();
+   background(0);
 }
 
 
