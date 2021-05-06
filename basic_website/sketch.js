@@ -135,6 +135,7 @@ this.remove();
   // move the art work
  function deviceShaken() {
   redraw();
+  background(255);
 }
 
 
