@@ -25,17 +25,7 @@ let randomColor;
   background(255);
     
 
-var i = 0
-   // draw the shapes
-   stroke(255, 50);
-   for (i = 0; i < shapesAmount; i++) {
-      drawRandomShape("rectangle");
-   }
-   
-   stroke (0, 50);
-   for (i = 0; i < shapesAmount2; i++) {
-      drawRandomShape("ellipse");
-   }
+ }
 
 
    /* triangle doesnt work yet
@@ -48,7 +38,17 @@ var i = 0
    
 
  function draw() {
-
+  var i = 0
+  // draw the shapes
+  stroke(255, 50);
+  for (i = 0; i < shapesAmount; i++) {
+     drawRandomShape("rectangle");
+  }
+  
+  stroke (0, 50);
+  for (i = 0; i < shapesAmount2; i++) {
+     drawRandomShape("ellipse");
+  }
  }
 
  
@@ -86,11 +86,11 @@ var i = 0
    }
  }
 
- function deviceShaken(){
+
+ function deviceshaken() {
   redraw();
- }}
-
-
+}
+ 
  
 
   
