@@ -131,8 +131,10 @@ let randomColor;
 this.remove();
   }
 
+  // shake to reload
+  // move the art work
  function deviceshaken() {
-   background(0);
+   background(255);
 }
 
 
