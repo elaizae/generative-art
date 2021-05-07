@@ -40,10 +40,7 @@ let randomColor;
  function draw() {
 
  
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-    x += dx;
-    y += dy;
+  
   
 
   var i = 0
@@ -59,6 +56,10 @@ let randomColor;
   }
  }
 
+ const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+    x += dx;
+    y += dy;
  
 
  function drawRandomShape(choice) {
@@ -94,8 +95,13 @@ let randomColor;
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
-  
+   
+  //
 
+   const dx = constrain(rotationY, -3,3);
+   const dy = constrain(rotationX, -3,3);
+     x += dx;
+     y += dy;
 
  
  }
