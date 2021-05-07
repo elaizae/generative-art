@@ -38,11 +38,19 @@ let randomColor;
    
 
  function draw() {
+if (!permissionGranted) return;
 
+
+ background (255);
+
+
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+  x += dx;
+  y += dy;
+  
+  
  
-  
-  
-
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -94,11 +102,6 @@ let randomColor;
 
   //
 
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-  x += dx;
-  y += dy;
-  
 
  
  }
