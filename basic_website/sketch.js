@@ -40,11 +40,12 @@ let randomColor;
  function draw() {
 
  
-  /* const dx = constrain(rotationX, -1,1);
-  const dy = constrain(rotationY, -1,1);
-  x += dx*2;
-  y += dy*2;
-*/ 
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+    x += dx*2;
+    y += dy*2;
+    x = constrain(x, y, width);
+    y = constrain(x, y, height);
 
   var i = 0
   // draw the shapes
@@ -145,6 +146,10 @@ let randomColor;
 this.remove();
   }
 
+function deviceMoved(){
+x = x +5;
+
+}
   // shake to reload
   // move the art work
  function deviceShaken() {
