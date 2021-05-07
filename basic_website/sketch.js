@@ -20,7 +20,7 @@ let randomColor;
 
  function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
-  myCanvas.parent("frame");
+  // myCanvas.parent("frame");
   noLoop();
   background(255);
     
@@ -91,6 +91,10 @@ let randomColor;
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
+   const dx = constrain(rotationX, -1,1);
+  const dy = constrain(rotationY, -1,1);
+  x += dx*2;
+  y += dy*2;
  }
 
 
