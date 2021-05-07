@@ -16,7 +16,7 @@
 let someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67"];
 
 let randomColor;
-
+let x, y;
 
  function setup() {
    
@@ -24,8 +24,8 @@ let randomColor;
   // myCanvas.parent("frame");
    noLoop();
    background(255);
-   x =width/2;
-   y =height/2;
+   x =width;
+   y =height;
    
   
     
