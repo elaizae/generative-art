@@ -79,9 +79,7 @@ let randomColor;
    const dy = constrain(rotationX, -3,3);
    x += dx*2;
    y += dy*2;
-   x = constrain(x,0, y);
-   y = constrain(x,0, y);
-   
+ 
    if (choice == "ellipse") {
      noStroke();
      fill(someColors1[randomColor]);
