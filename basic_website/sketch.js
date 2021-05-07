@@ -23,6 +23,7 @@ let randomColor;
   // myCanvas.parent("frame");
   noLoop();
   background(255);
+  setShakeThreshold(10);
     
   // Sources for the motion permission code 
 // I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
