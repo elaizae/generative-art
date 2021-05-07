@@ -42,10 +42,9 @@ let randomColor;
  
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
-    x += dx*2;
-    y += dy*2;
-    x = constrain(x, y, width);
-    y = constrain(x, y, height);
+    x += dx;
+    y += dy;
+  
 
   var i = 0
   // draw the shapes
