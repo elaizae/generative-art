@@ -56,16 +56,16 @@ let randomColor;
   }
  }
 
- const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
+   const dx = constrain(rotationY, -3,3);
+   const dy = constrain(rotationX, -3,3);
     x += dx;
     y += dy;
  
 
  function drawRandomShape(choice) {
    // sizes for the shapes
-   x = random(width);
-   y = random(height);
+   //x = random(width);
+   //y = random(height);
    w = random(25, 300);
    h = random(5, 300);
    //tw = random(25, 100);
@@ -95,13 +95,10 @@ let randomColor;
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
-   
+
   //
 
-   const dx = constrain(rotationY, -3,3);
-   const dy = constrain(rotationX, -3,3);
-     x += dx;
-     y += dy;
+   
 
  
  }
