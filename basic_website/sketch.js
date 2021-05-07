@@ -39,12 +39,7 @@ let randomColor;
 
  function draw() {
 
-  const dx = constrain(rotationX, -1,1);
-  const dy = constrain(rotationY, -1,1);
-  x += dx*2;
-  y += dy*2;
-  x = constrain(x, y);
-  y = constrain(x, y);
+ 
   /* const dx = constrain(rotationX, -1,1);
   const dy = constrain(rotationY, -1,1);
   x += dx*2;
@@ -80,6 +75,13 @@ let randomColor;
    randomColor= random(someColors1.length);
    randomColor= floor(randomColor);
 
+   const dx = constrain(rotationX, -1,1);
+   const dy = constrain(rotationY, -1,1);
+   x += dx*2;
+   y += dy*2;
+   x = constrain(x,0, width);
+   y = constrain(x,0, heigth);
+
    if (choice == "ellipse") {
      noStroke();
      fill(someColors1[randomColor]);
@@ -97,10 +99,10 @@ let randomColor;
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
+  
 
 
-
-   
+ 
  }
 
 
