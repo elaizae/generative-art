@@ -75,8 +75,8 @@ let randomColor;
    randomColor= random(someColors1.length);
    randomColor= floor(randomColor);
 
-   const dx = constrain(rotationX, -3,3);
-   const dy = constrain(rotationY, -3,3);
+   const dx = constrain(rotationY, -3,3);
+   const dy = constrain(rotationX, -3,3);
    x += dx*2;
    y += dy*2;
    x = constrain(x,0, y);
