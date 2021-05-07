@@ -16,62 +16,14 @@
 let someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67"];
 
 let randomColor;
-let x, y;
+
 
  function setup() {
-   
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
-   noLoop();
-   background(255);
-   x =width;
-   y =height;
-   
-  
+  noLoop();
+  background(255);
     
-   // Sources for the motion permission code 
-// I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
-   // device
-   if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
-     //ios 13
-
-      DeviceOrientationEvent.requestPermission()
-     .catch(() => {
-
-     let button = createButton("click to allow acces to sensors"); 
-     button.style("font-size", "24px");
-     button.center();
-     button.mousePressed( requestAccess ); 
-     throw error;
-    })
-    .then(() => {
-
-      permissionGranted = true;
-    })
-     // button.createButton("click to allow acces to sensors");
-     
-
-   } else {
-     //non 13
-    // textSize(48);
-     //text("non ios13 device, 100, 100");
-    
-   }
- 
-
-  function requestAccess() {
-    DeviceOrientationEvent.requestPermission()
-  .then(response => {
-    if (response == 'granted'){
-      permissionGranted = true;
-    } else {
-      permissionGranted = false;
-    }
-  })
-  .catch(console.error);
-
-this.remove();
-  }
 
  }
 
@@ -86,16 +38,12 @@ this.remove();
    
 
  function draw() {
-//if (!permissionGranted) return;
+if (!permissionGranted) return;
 
 
  background (255);
 
 
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-  x += dx;
-  y += dy;
   
   
  
@@ -115,8 +63,8 @@ this.remove();
 
  function drawRandomShape(choice) {
    // sizes for the shapes
-   //x = random(width);
-   //y = random(height);
+   x = random(width);
+   y = random(height);
    w = random(25, 300);
    h = random(5, 300);
    //tw = random(25, 100);
@@ -155,6 +103,54 @@ this.remove();
  }
 
 
+// Sources for the motion permission code 
+// I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
+   // device
+   if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
+     //ios 13
+
+      DeviceOrientationEvent.requestPermission()
+     .catch(() => {
+
+     let button = createButton("click to allow acces to sensors"); 
+     button.style("font-size", "24px");
+     button.center();
+     button.mousePressed( requestAccess ); 
+     throw error;
+    })
+    .then(() => {
+
+      permissionGranted = true;
+    })
+     // button.createButton("click to allow acces to sensors");
+     
+
+   } else {
+     //non 13
+     textSize(48);
+     text("non ios13 device, 100, 100");
+    
+   }
+ 
+
+  function requestAccess() {
+    DeviceOrientationEvent.requestPermission()
+  .then(response => {
+    if (response == 'granted'){
+      permissionGranted = true;
+    } else {
+      permissionGranted = false;
+    }
+  })
+  .catch(console.error);
+
+this.remove();
+  }
+
+function deviceMoved(){
+x = x +5;
+
+}
   // shake to reload
   // move the art work
  function deviceShaken() {
