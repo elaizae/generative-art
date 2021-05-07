@@ -56,9 +56,6 @@ let randomColor;
   }
  }
 
-   const dx = constrain(rotationY, -3,3);
-   const dy = constrain(rotationX, -3,3);
-    
 
  function drawRandomShape(choice) {
    // sizes for the shapes
@@ -74,9 +71,7 @@ let randomColor;
    randomColor= random(someColors1.length);
    randomColor= floor(randomColor);
    
-   x += dx;
-   y += dy;
-   
+  
   
  
    if (choice == "ellipse") {
@@ -99,7 +94,11 @@ let randomColor;
 
   //
 
-   
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+  x += dx;
+  y += dy;
+  
 
  
  }
