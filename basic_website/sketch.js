@@ -75,12 +75,12 @@ let randomColor;
    randomColor= random(someColors1.length);
    randomColor= floor(randomColor);
 
-   const dx = constrain(rotationX, -1,1);
-   const dy = constrain(rotationY, -1,1);
+   const dx = constrain(rotationX, -3,3);
+   const dy = constrain(rotationY, -3,3);
    x += dx*2;
    y += dy*2;
-   x = constrain(x, y);
-   y = constrain(x, y);
+   x = constrain(x,0, y);
+   y = constrain(x,0, y);
    
    if (choice == "ellipse") {
      noStroke();
