@@ -22,8 +22,8 @@ let randomColor;
    
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
-  //noLoop();
-   //background(255);
+   noLoop();
+   background(255);
    x =width/2;
    y =height/2;
    
@@ -155,12 +155,6 @@ this.remove();
  }
 
 
-
-
-function deviceMoved(){
-x = x +5;
-
-}
   // shake to reload
   // move the art work
  function deviceShaken() {
