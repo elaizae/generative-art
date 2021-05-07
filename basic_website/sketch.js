@@ -19,11 +19,59 @@ let randomColor;
 
 
  function setup() {
+   
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
-  noLoop();
-  background(255);
+  //noLoop();
+   //background(255);
+   x =width/2;
+   y =height/2;
+   
+  
     
+   // Sources for the motion permission code 
+// I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
+   // device
+   if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
+     //ios 13
+
+      DeviceOrientationEvent.requestPermission()
+     .catch(() => {
+
+     let button = createButton("click to allow acces to sensors"); 
+     button.style("font-size", "24px");
+     button.center();
+     button.mousePressed( requestAccess ); 
+     throw error;
+    })
+    .then(() => {
+
+      permissionGranted = true;
+    })
+     // button.createButton("click to allow acces to sensors");
+     
+
+   } else {
+     //non 13
+    // textSize(48);
+     //text("non ios13 device, 100, 100");
+    
+   }
+ 
+
+  function requestAccess() {
+    DeviceOrientationEvent.requestPermission()
+  .then(response => {
+    if (response == 'granted'){
+      permissionGranted = true;
+    } else {
+      permissionGranted = false;
+    }
+  })
+  .catch(console.error);
+
+this.remove();
+  }
 
  }
 
@@ -38,7 +86,7 @@ let randomColor;
    
 
  function draw() {
-if (!permissionGranted) return;
+//if (!permissionGranted) return;
 
 
  background (255);
@@ -107,49 +155,7 @@ if (!permissionGranted) return;
  }
 
 
-// Sources for the motion permission code 
-// I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
-   // device
-   if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
-     //ios 13
 
-      DeviceOrientationEvent.requestPermission()
-     .catch(() => {
-
-     let button = createButton("click to allow acces to sensors"); 
-     button.style("font-size", "24px");
-     button.center();
-     button.mousePressed( requestAccess ); 
-     throw error;
-    })
-    .then(() => {
-
-      permissionGranted = true;
-    })
-     // button.createButton("click to allow acces to sensors");
-     
-
-   } else {
-     //non 13
-     textSize(48);
-     text("non ios13 device, 100, 100");
-    
-   }
- 
-
-  function requestAccess() {
-    DeviceOrientationEvent.requestPermission()
-  .then(response => {
-    if (response == 'granted'){
-      permissionGranted = true;
-    } else {
-      permissionGranted = false;
-    }
-  })
-  .catch(console.error);
-
-this.remove();
-  }
 
 function deviceMoved(){
 x = x +5;
