@@ -62,8 +62,8 @@ let randomColor;
 
  function drawRandomShape(choice) {
    // sizes for the shapes
-   x = random(width);
-   y = random(height);
+   //x = random(width);
+   //y = random(height);
    w = random(25, 300);
    h = random(5, 300);
    //tw = random(25, 100);
