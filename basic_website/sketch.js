@@ -140,7 +140,7 @@ this.remove();
   // shake to reload
   // move the art work
  function deviceShaken() {
-  background (0);
+  background (255);
   redraw();
 }
 
