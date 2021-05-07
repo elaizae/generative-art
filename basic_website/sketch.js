@@ -95,8 +95,8 @@ let randomColor;
   const dy = constrain(rotationY, -1,1);
   x += dx*2;
   y += dy*2;
-  x = contrain(x, y, whc);
-  y = contrain(x, y, whc);
+  x = constrain(x, y);
+  y = constrain(x, y);
  }
 
 
