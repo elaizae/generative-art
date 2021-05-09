@@ -165,7 +165,7 @@ cy = constrain(cy, 0, width);
 
 ellipse(cx, cy , 100 ,100);
 
-  }}
+  }
  
  
   
@@ -176,8 +176,8 @@ ellipse(cx, cy , 100 ,100);
  setShakeThreshold(2);
   //background ('white');
   //redraw();
-//}
-
+}
+ }
 
   
 function windowResized() {
