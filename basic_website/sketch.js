@@ -156,14 +156,7 @@ this.remove();
    }
    
  
-const dx = constrain(rotationY, -5,5);
-const dy = constrain(rotationX, -5,5);
-cx += dx;
-cy += dy; 
-cx = constrain(cx, 0, width);
-cy = constrain(cy, 0, width);
 
-ellipse(cx, cy , 100 ,100);
 
   }
  
@@ -173,7 +166,14 @@ ellipse(cx, cy , 100 ,100);
   // shake to reload
   // move the art work
  function deviceMoved() {
- 
+  const dx = constrain(rotationY, -5,5);
+  const dy = constrain(rotationX, -5,5);
+  cx += dx;
+  cy += dy; 
+  cx = constrain(cx, 0, width);
+  cy = constrain(cy, 0, width);
+  
+  ellipse(cx, cy , 100 ,100);
   background ('white');
   //redraw();
 }
