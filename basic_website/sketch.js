@@ -91,13 +91,14 @@ this.remove();
    
 
  function draw() {
-
+if (!permissionGranted) return;
  
-  const dx = constrain(rotationY, -1,1);
-  const dy = constrain(rotationX, -1,1);
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
   cx += dx*2;
-  cy += dy*2;
- 
+  cy += dy*2; 
+
+  ellipse(cx,cy,200,200);
 
 
 
@@ -154,12 +155,7 @@ this.remove();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
-   const dx = constrain(rotationY, -1,1);
-   const dy = constrain(rotationX, -1,1);
-   cx += dx*2;
-   cy += dy*2; 
    
-   ellipse(cx,cy,200,200);
 }
   // shake to reload
   // move the art work
