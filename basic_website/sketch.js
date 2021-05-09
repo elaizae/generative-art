@@ -158,8 +158,8 @@ this.remove();
  
 const dx = constrain(rotationY, -5,5);
 const dy = constrain(rotationX, -5,5);
-cx += dx*2;
-cy += dy*2; 
+cx += dx*5;
+cy += dy*5; 
 cx = constrain(cx, 0, width);
 cy = constrain(cy, 0, width);
 
@@ -172,8 +172,8 @@ ellipse(cx, cy , 100 ,100);
 
   // shake to reload
   // move the art work
- //function deviceShaken() {
- // setShakeThreshold(20);
+ function deviceMoved() {
+ setShakeThreshold(2);
   //background ('white');
   //redraw();
 //}
