@@ -170,11 +170,11 @@ ellipse(cx, cy , 100 ,100);
 
   // shake to reload
   // move the art work
- function deviceShaken() {
-  setShakeThreshold(20);
-  background ('white');
-  redraw();
-}
+ //function deviceShaken() {
+ // setShakeThreshold(20);
+  //background ('white');
+  //redraw();
+//}
 
 
   
