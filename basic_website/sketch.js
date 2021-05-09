@@ -34,7 +34,7 @@ function setup() {
   
   noLoop();
   background(255);
-  setShakeThreshold(70);
+  setShakeThreshold(20);
 
   cx = width/2;
   cy= height/2; 
@@ -158,10 +158,8 @@ this.remove();
  */
 const dx = constrain(rotationY, -3,3);
 const dy = constrain(rotationX, -3,3);
-cx += dx*2;
-cy += dy*2; 
-cx = constrain(cx, 0, width);
-cy = constrain(cy, 0, height);
+cx += dx;
+cy += dy; 
 
 ellipse(cx, cy , 100 ,100);
 
