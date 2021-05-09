@@ -22,7 +22,7 @@ let randomColor;
 //function preload() {
 //pinkFabric = loadImage('img/pink.JPG');
 //redFabric = loadImage('img/red.JPG');
-}
+//}
 
 function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
