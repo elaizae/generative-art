@@ -11,8 +11,9 @@
 
  // array of all my colors
 someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67", "#46594c", "#3C2320",  "#d98e73", "#F2AD85", "#A49B8F", "#812F14", "#C9532A", "#DF5428"];
-let randomColor;
 
+let randomColor;
+let cx, cy;
 //let pinkFabric;
 //let redFabric;
 
@@ -31,6 +32,8 @@ function setup() {
   background(255);
   setShakeThreshold(20);
     
+  cx = width/2;
+  cy= height/2;
   // Sources for the motion permission code 
   // I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
    // device
@@ -90,14 +93,13 @@ this.remove();
  function draw() {
 
  
-  /* const dx = constrain(rotationY, -1,1);
+  const dx = constrain(rotationY, -1,1);
   const dy = constrain(rotationX, -1,1);
-  x += dx*2;
-  y += dy*2;
-  x=constrain(x,0,0,weight)
-  y=constrain(y,0,0,weight)
+  cx += dx*2;
+  cy += dy*2;
+ 
 
-*/ 
+
 
 
   var i = 0
@@ -152,6 +154,12 @@ this.remove();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
+   const dx = constrain(rotationY, -1,1);
+   const dy = constrain(rotationX, -1,1);
+   cx += dx*2;
+   cy += dy*2; 
+   
+   ellipse(cx,cy,200,200);
 }
   // shake to reload
   // move the art work
