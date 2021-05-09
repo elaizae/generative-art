@@ -11,11 +11,24 @@
  var shapesAmount = 30;
  var shapesAmount2 = 5;
  var shapesAmount3 = 0;
+ //var pinkFabric;
+ //var redFabric;
 
 // array of all my colors
-let someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67"];
-
+someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67", "#46594c", "#3C2320",  "#d98e73", "#F2AD85", "#A49B8F", "#812F14", "#C9532A", "#DF5428"];
 let randomColor;
+
+//let pinkFabric;
+//let redFabric;
+
+//let fabrics = [ "pinkFabric", "redFabric"];
+//let showFabric;
+
+function preload() {
+//pinkFabric = loadImage('img/pink.JPG');
+//redFabric = loadImage('img/red.JPG');
+}
+
 
 
  function setup() {
@@ -23,10 +36,10 @@ let randomColor;
   // myCanvas.parent("frame");
   noLoop();
   background(255);
-  setShakeThreshold(10);
+  setShakeThreshold(20);
     
   // Sources for the motion permission code 
-// I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
+  // I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
    // device
    if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
     //ios 13
@@ -93,6 +106,7 @@ this.remove();
 
 */ 
 
+
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -122,12 +136,16 @@ this.remove();
    randomColor= random(someColors1.length);
    randomColor= floor(randomColor);
 
+   //showFabric= random(fabrics.length);
+   //showFabric= floor(showFabric);
   
  
    if (choice == "ellipse") {
      noStroke();
+     //img.mask(fabrics[showFabric]);
      fill(someColors1[randomColor]);
      ellipse(x, y, whc);
+     
    }
 
    /*else if (choice == "triangle") {
@@ -141,18 +159,6 @@ this.remove();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
-  
-
-
- 
- }
-
-
-
-
-function deviceMoved(){
-x = x +5;
-
 }
   // shake to reload
   // move the art work
