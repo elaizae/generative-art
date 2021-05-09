@@ -12,7 +12,7 @@
  // array of all my colors
 someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67", "#46594c", "#3C2320",  "#d98e73", "#F2AD85", "#A49B8F", "#812F14", "#C9532A", "#DF5428"];
 
-
+let permissionGranted = false;
 let cx, cy;
 let randomColor;
 
@@ -30,12 +30,14 @@ let randomColor;
 function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
+  cx = width/2;
+  cy= height/2; 
+  
   noLoop();
   background(255);
   setShakeThreshold(20);
     
-  cx = width/2;
-  cy= height/2;
+ 
 
   // Sources for the motion permission code 
   // I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
@@ -73,7 +75,7 @@ function setup() {
    if (response == 'granted'){
      permissionGranted = true;
    } else {
-     permissionGranted = false;
+     permissionGranted = false; 
    }
  })
  .catch(console.error);
@@ -94,7 +96,7 @@ this.remove();
    
 
  function draw() {
-
+  if (!permissionGranted) return;
  
 
   var i = 0
@@ -110,7 +112,7 @@ this.remove();
   }
  }
 
- //if (!permissionGranted) return;
+
  
   
  
@@ -153,9 +155,9 @@ this.remove();
      rect(x, y, w, h);
    }
    
-
-const dx = constrain(rotationY, -1,1);
-const dy = constrain(rotationX, -1,1);
+ 
+const dx = constrain(rotationY, -3,3);
+const dy = constrain(rotationX, -3,3);
 cx += dx;
 cy += dy; 
 
