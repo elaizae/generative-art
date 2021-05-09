@@ -30,13 +30,13 @@ let randomColor;
 function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
-  cx = width/2;
-  cy= height/2; 
+  
   
   noLoop();
   background(255);
   setShakeThreshold(20);
-    
+  cx = width/2;
+  cy= height/2; 
  
 
   // Sources for the motion permission code 
@@ -96,8 +96,7 @@ this.remove();
    
 
  function draw() {
-  if (!permissionGranted) return;
- 
+  //if (!permissionGranted) return;
 
   var i = 0
   // draw the shapes
@@ -110,7 +109,7 @@ this.remove();
   for (i = 0; i < shapesAmount2; i++) {
      drawRandomShape("ellipse");
   }
- }
+ 
 
 
  
@@ -164,7 +163,7 @@ cy += dy;
 ellipse(cx, cy ,200,200);
 
 }
-
+ }
   
 
   // shake to reload
