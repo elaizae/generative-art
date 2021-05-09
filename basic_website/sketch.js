@@ -34,7 +34,7 @@ function setup() {
   
   noLoop();
   background(255);
-  setShakeThreshold(20);
+  
 
   cx = width/2;
   cy= height/2; 
@@ -156,8 +156,8 @@ this.remove();
    }
    
  
-const dx = constrain(rotationY, -3,3);
-const dy = constrain(rotationX, -3,3);
+const dx = constrain(rotationY, -5,5);
+const dy = constrain(rotationX, -5,5);
 cx += dx;
 cy += dy; 
 
@@ -171,6 +171,7 @@ ellipse(cx, cy , 100 ,100);
   // shake to reload
   // move the art work
  function deviceShaken() {
+  setShakeThreshold(20);
   background ('white');
   redraw();
 }
