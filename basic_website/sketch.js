@@ -158,8 +158,8 @@ this.remove();
  
 const dx = constrain(rotationY, -5,5);
 const dy = constrain(rotationX, -5,5);
-cx += dx*5;
-cy += dy*5; 
+cx += dx;
+cy += dy; 
 cx = constrain(cx, 0, width);
 cy = constrain(cy, 0, width);
 
