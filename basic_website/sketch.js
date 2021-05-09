@@ -154,11 +154,13 @@ this.remove();
   // shake to reload
   // move the art work
 
-  background ('white');
+  //background ('white');
+
+
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
-  cx += dx;
-  cy += dy; 
+  cx += dx*10;
+  cy += dy*10; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
   
