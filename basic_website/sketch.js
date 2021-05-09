@@ -161,7 +161,7 @@ const dy = constrain(rotationX, -3,3);
 cx += dx;
 cy += dy; 
 
-ellipse(cx, cy ,200,200);
+ellipse(cx, cy , 100 ,100);
 
 }
  
@@ -169,10 +169,10 @@ ellipse(cx, cy ,200,200);
 
   // shake to reload
   // move the art work
- function deviceShaken() {
-  background ('white');
-  redraw();
-}
+ //function deviceShaken() {
+  //background ('white');
+  //redraw();
+//}
 
 
   
