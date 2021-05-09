@@ -165,7 +165,8 @@ this.remove();
 
   // shake to reload
   // move the art work
- function deviceMoved() {
+
+  //background ('white');
   const dx = constrain(rotationY, -5,5);
   const dy = constrain(rotationX, -5,5);
   cx += dx;
@@ -174,10 +175,10 @@ this.remove();
   cy = constrain(cy, 0, width);
   
   ellipse(cx, cy , 100 ,100);
-  background ('white');
+  
   //redraw();
 }
- }
+ 
 
   
 function windowResized() {
