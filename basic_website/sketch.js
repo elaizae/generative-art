@@ -13,9 +13,11 @@
 someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67", "#46594c", "#3C2320",  "#d98e73", "#F2AD85", "#A49B8F", "#812F14", "#C9532A", "#DF5428"];
 
 let permissionGranted = false;
-let cx, cy;
+
+
 let randomColor;
 
+let cx, cy;
 //let pinkFabric;
 //let redFabric;
 
@@ -33,11 +35,11 @@ function setup() {
   
   
   noLoop();
-  background(255);
+  //background(255);
   
 
   cx = width/2;
-  cy= height/2; 
+  cy = height/2; 
  
 
   // Sources for the motion permission code 
