@@ -35,6 +35,7 @@ function setup() {
   noLoop();
   background(255);
   setShakeThreshold(20);
+
   cx = width/2;
   cy= height/2; 
  
@@ -98,7 +99,7 @@ this.remove();
  function draw() {
   //if (!permissionGranted) return;
 
-  var i = 0
+  /* var i = 0
   // draw the shapes
   stroke(255, 50);
   for (i = 0; i < shapesAmount; i++) {
@@ -146,7 +147,7 @@ this.remove();
    noStroke();
      fill(someColors1[randomColor]);
      triangle(x, y, x, x, h, w)
-   }*/
+   }
 
   else {
      noStroke();
@@ -154,7 +155,7 @@ this.remove();
      rect(x, y, w, h);
    }
    
- 
+ */
 const dx = constrain(rotationY, -3,3);
 const dy = constrain(rotationX, -3,3);
 cx += dx;
@@ -163,7 +164,7 @@ cy += dy;
 ellipse(cx, cy ,200,200);
 
 }
- }
+ 
   
 
   // shake to reload
