@@ -1,10 +1,5 @@
 /* 👇 Start writing your p5.js code here */
 
-
- // rect (x, y, w, [h])
- // triangle(x1, y1, x2, y2, x3, y3)
-
- 
  var x, y, w, h;
 
 // amount of shapes for each shape 
@@ -14,7 +9,7 @@
  //var pinkFabric;
  //var redFabric;
 
-// array of all my colors
+ // array of all my colors
 someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67", "#46594c", "#3C2320",  "#d98e73", "#F2AD85", "#A49B8F", "#812F14", "#C9532A", "#DF5428"];
 let randomColor;
 
@@ -24,14 +19,12 @@ let randomColor;
 //let fabrics = [ "pinkFabric", "redFabric"];
 //let showFabric;
 
-function preload() {
+//function preload() {
 //pinkFabric = loadImage('img/pink.JPG');
 //redFabric = loadImage('img/red.JPG');
 }
 
-
-
- function setup() {
+function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
   noLoop();
