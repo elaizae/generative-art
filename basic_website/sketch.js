@@ -94,6 +94,9 @@ this.remove();
    
 
  function draw() {
+
+ 
+
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -109,13 +112,7 @@ this.remove();
 
  //if (!permissionGranted) return;
  
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-  cx += dx;
-  cy += dy; 
-
-  ellipse(cx, cy ,200,200);
-
+  
  
 
  function drawRandomShape(choice) {
@@ -156,7 +153,18 @@ this.remove();
      rect(x, y, w, h);
    }
    
+
+const dx = constrain(rotationY, -1,1);
+const dy = constrain(rotationX, -1,1);
+cx += dx;
+cy += dy; 
+
+ellipse(cx, cy ,200,200);
+
 }
+
+  
+
   // shake to reload
   // move the art work
  function deviceShaken() {
