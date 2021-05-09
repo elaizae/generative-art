@@ -154,25 +154,17 @@ this.remove();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
-   
- 
-
-
   
- 
- 
-  
-
   // shake to reload
   // move the art work
 
-  //background ('white');
-  const dx = constrain(rotationY, -5,5);
-  const dy = constrain(rotationX, -5,5);
+  background ('white');
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
   cx += dx;
   cy += dy; 
   cx = constrain(cx, 0, width);
-  cy = constrain(cy, 0, width);
+  cy = constrain(cy, 0, height);
   
   ellipse(cx, cy , 100 ,100);
   
