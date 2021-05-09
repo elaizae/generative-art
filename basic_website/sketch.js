@@ -34,7 +34,7 @@ function setup() {
   
   noLoop();
   background(255);
-  setShakeThreshold(20);
+  setShakeThreshold(70);
 
   cx = width/2;
   cy= height/2; 
