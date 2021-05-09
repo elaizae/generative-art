@@ -173,7 +173,7 @@ ellipse(cx, cy , 100 ,100);
   // shake to reload
   // move the art work
  function deviceMoved() {
- setShakeThreshold(2);
+ 
   //background ('white');
   //redraw();
 }
