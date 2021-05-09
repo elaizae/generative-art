@@ -145,7 +145,7 @@ this.remove();
 
    /*else if (choice == "triangle") {
    noStroke();
-     fill(someColors1[randomColor]);
+     //fill(someColors1[randomColor]);
      triangle(x, y, x, x, h, w)
    }*/
 
