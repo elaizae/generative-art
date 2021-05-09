@@ -36,6 +36,7 @@ function setup() {
     
   cx = width/2;
   cy= height/2;
+
   // Sources for the motion permission code 
   // I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
    // device
@@ -93,18 +94,6 @@ this.remove();
    
 
  function draw() {
-if (!permissionGranted) return;
- 
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-  cx += dx;
-  cy += dy; 
-
-  ellipse(cx, cy ,200,200);
-
-
-
-
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -117,6 +106,15 @@ if (!permissionGranted) return;
      drawRandomShape("ellipse");
   }
  }
+
+ //if (!permissionGranted) return;
+ 
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+  cx += dx;
+  cy += dy; 
+
+  ellipse(cx, cy ,200,200);
 
  
 
