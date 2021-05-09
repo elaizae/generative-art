@@ -34,7 +34,7 @@ function setup() {
   
   noLoop();
   background(255);
-
+  setShakeThreshold(20);
 
   cx = width/2;
   cy= height/2; 
@@ -178,6 +178,6 @@ ellipse(cx, cy , 100 ,100);
 
 
   
-//function windowResized() {
- // resizeCanvas(windowWidth, windowHeight);
-//}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
