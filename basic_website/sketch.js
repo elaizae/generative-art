@@ -158,8 +158,10 @@ this.remove();
  
 const dx = constrain(rotationY, -5,5);
 const dy = constrain(rotationX, -5,5);
-cx += dx;
-cy += dy; 
+cx += dx*2;
+cy += dy*2; 
+cx = constrain(cx, 0, width);
+cy = constrain(cy, 0, width);
 
 ellipse(cx, cy , 100 ,100);
 
