@@ -158,7 +158,7 @@ this.remove();
  
 
 
-  }
+  
  
  
   
@@ -178,7 +178,7 @@ this.remove();
   
   //redraw();
 }
- 
+}
 
   
 function windowResized() {
