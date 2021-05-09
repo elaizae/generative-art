@@ -12,8 +12,10 @@
  // array of all my colors
 someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67", "#46594c", "#3C2320",  "#d98e73", "#F2AD85", "#A49B8F", "#812F14", "#C9532A", "#DF5428"];
 
-let randomColor;
+
 let cx, cy;
+let randomColor;
+
 //let pinkFabric;
 //let redFabric;
 
@@ -95,10 +97,10 @@ if (!permissionGranted) return;
  
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
-  cx += dx*2;
-  cy += dy*2; 
+  cx += dx;
+  cy += dy; 
 
-  ellipse(cx,cy,200,200);
+  ellipse(cx, cy ,200,200);
 
 
 
