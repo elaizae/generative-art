@@ -178,6 +178,6 @@ ellipse(cx, cy , 100 ,100);
 
 
   
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+//function windowResized() {
+ // resizeCanvas(windowWidth, windowHeight);
+//}
