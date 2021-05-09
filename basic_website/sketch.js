@@ -174,7 +174,7 @@ ellipse(cx, cy , 100 ,100);
   // move the art work
  function deviceMoved() {
  
-  //background ('white');
+  background ('white');
   //redraw();
 }
  }
