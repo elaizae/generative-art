@@ -34,7 +34,7 @@ function setup() {
   // myCanvas.parent("frame");
   
   
-  noLoop();
+  //noLoop();
   //background(255);
   
 
