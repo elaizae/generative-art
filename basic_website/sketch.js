@@ -3,8 +3,8 @@
  var x, y, w, h;
 
 // amount of shapes for each shape 
- var shapesAmount = 30;
- var shapesAmount2 = 5;
+ var shapesAmount = 1;
+ var shapesAmount2 = 0;
  var shapesAmount3 = 0;
  //var pinkFabric;
  //var redFabric;
@@ -123,7 +123,7 @@ for (i = 0; i < shapesAmount2; i++) {
  
 
  function drawRandomShape(choice) {
-noLoop();
+
    // sizes for the shapes
    x = random(width);
    y = random(height);
@@ -163,8 +163,8 @@ noLoop();
   }
 
 //if (!permissionGranted) return;
- function devicemoved() {
-   loop();
+ 
+
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*2;
@@ -174,8 +174,7 @@ noLoop();
   fill(255, 204, 0);
   ellipse(cx, cy , 100 ,100);
 
- }
-
+ 
 }
 
   //redraw();
