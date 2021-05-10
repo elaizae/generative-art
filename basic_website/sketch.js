@@ -3,7 +3,7 @@
  var x, y, w, h;
 
 // amount of shapes for each shape 
- var shapesAmount = 30;
+ var shapesAmount = 40;
  var shapesAmount2 = 5;
  var shapesAmount3 = 0;
  //var pinkFabric;
@@ -143,11 +143,11 @@ this.remove();
    //showFabric= floor(showFabric);
   
  
-   if (choice == "ellipse") {
-     noStroke();
+   //if (choice == "ellipse") {
+    // noStroke();
      //img.mask(fabrics[showFabric]);
-     fill(someColors1[randomColor]);
-     ellipse(x, y, whc);
+    // fill(someColors1[randomColor]);
+    // ellipse(x, y, whc);
      
    }
 
@@ -157,7 +157,7 @@ this.remove();
      triangle(x, y, x, x, h, w)
    }*/
 
-  else if (choice == "rectangle"){
+  if (choice == "rectangle"){
      noStroke();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
