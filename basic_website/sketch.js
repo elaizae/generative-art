@@ -34,9 +34,9 @@ function setup() {
   // myCanvas.parent("frame");
   
   
+
+  background (0);
   noLoop();
-  background (255);
-  
 
   cx = width/1;
   cy = height/1; 
@@ -99,9 +99,9 @@ this.remove();
    
 
  function draw() {
-
+  
   if (!permissionGranted) return;
-  background (255);
+  
   var i = 0
   // draw the shapes
   stroke(255, 50);
