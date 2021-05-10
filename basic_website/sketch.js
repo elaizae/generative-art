@@ -169,7 +169,7 @@ noLoop();
 
  }
  loop();
-function mousePressed(){
+function devicemoved(){
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*2;
