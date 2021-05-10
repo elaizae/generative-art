@@ -1,5 +1,5 @@
 /* 👇 Start writing your p5.js code here */
-
+// this is the one 
  var x, y, w, h;
 
 // amount of shapes for each shape 
