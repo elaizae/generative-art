@@ -109,7 +109,7 @@ this.remove();
 let stop = '';
 
 stroke(255, 50);
-for (let i = 0; i < 31; i++) {
+for (let i = 0; i < 21; i++) {
   
 drawRandomShape("rectangle");
  
