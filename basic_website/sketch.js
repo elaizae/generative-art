@@ -34,12 +34,12 @@ function setup() {
   // myCanvas.parent("frame");
   
   
-
-
   noLoop();
+  //background(255);
+  
 
-  cx = width/1;
-  cy = height/1; 
+  cx = width/2;
+  cy = height/2; 
  
 
   // Sources for the motion permission code 
@@ -99,9 +99,9 @@ this.remove();
    
 
  function draw() {
-  
+
   if (!permissionGranted) return;
-  
+  background (255);
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -146,7 +146,7 @@ this.remove();
      triangle(x, y, x, x, h, w)
    }*/
 
-  else if (choice == "rectangle"){
+  else {
      noStroke();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
