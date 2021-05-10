@@ -99,6 +99,19 @@ this.remove();
    
 
  function draw() {
+
+  Loop();
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+  cx += dx*2;
+  cy += dy*2; 
+  cx = constrain(cx, 0, width);
+  cy = constrain(cy, 0, height);
+  
+  ellipse(cx, cy , 100 ,100);
+  fill('#FFE820');
+
+  
   noLoop();
 
   var i = 0
@@ -151,18 +164,10 @@ this.remove();
      rect(x, y, w, h);
    }
   }
-  
-if (!permissionGranted) return;
-   Loop();
-   fill('#FFE820');
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-  cx += dx*2;
-  cy += dy*2; 
-  cx = constrain(cx, 0, width);
-  cy = constrain(cy, 0, height);
-  
-  ellipse(cx, cy , 100 ,100);
+
+//if (!permissionGranted) return;
+
+ 
 }
 
   //redraw();
