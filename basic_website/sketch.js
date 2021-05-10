@@ -99,7 +99,7 @@ this.remove();
    
 
  function draw() {
-  if (!permissionGranted) return;
+  //if (!permissionGranted) return;
 
   /* var i = 0
   // draw the shapes
