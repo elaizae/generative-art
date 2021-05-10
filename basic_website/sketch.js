@@ -102,6 +102,15 @@ this.remove();
   
   if (!permissionGranted) return;
   
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+  cx += dx;
+  cy += dy; 
+  cx = constrain(cx, 0, width);
+  cy = constrain(cy, 0, height);
+  
+  ellipse(cx, cy , 100 ,100);
+  
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -114,15 +123,8 @@ this.remove();
      drawRandomShape("ellipse");
   }
 
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-  cx += dx;
-  cy += dy; 
-  cx = constrain(cx, 0, width);
-  cy = constrain(cy, 0, height);
   
-  ellipse(cx, cy , 100 ,100);
-  
+
  function drawRandomShape(choice) {
    // sizes for the shapes
    x = random(width);
