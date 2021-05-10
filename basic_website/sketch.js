@@ -109,7 +109,7 @@ this.remove();
 let stop = '';
 
 stroke(255, 50);
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 31; i++) {
   
 drawRandomShape("rectangle");
  
@@ -169,7 +169,7 @@ noLoop();
 
  }
  loop();
-function devicemoved(){
+function mousePressed(){
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*2;
@@ -178,7 +178,7 @@ function devicemoved(){
   cy = constrain(cy, 0, height);
   fill(255, 204, 0);
  
-  ellipse(cx, cy , 30 , 30);
+  ellipse(cx, cy , 50 , 50);
 
 }
 
