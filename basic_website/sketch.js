@@ -178,7 +178,7 @@ function mousePressed(){
   cy = constrain(cy, 0, height);
   fill(255, 204, 0);
  
-  ellipse(cx, cy , 50 , 50);
+  ellipse(cx, cy , 10 , 10);
 
 }
 
