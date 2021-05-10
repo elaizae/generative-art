@@ -166,6 +166,10 @@ noLoop();
 //if (!permissionGranted) return;
  
 //loop();
+
+ }
+ loop();
+function mousePressed(){
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*2;
@@ -176,8 +180,8 @@ noLoop();
  
   ellipse(cx, cy , 100 ,100);
 
- 
 }
+
 
 
   //redraw();
