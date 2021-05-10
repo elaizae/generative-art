@@ -3,7 +3,7 @@
  var x, y, w, h;
 
 // amount of shapes for each shape 
- var shapesAmount = 40;
+ var shapesAmount = 30;
  var shapesAmount2 = 5;
  var shapesAmount3 = 0;
  //var pinkFabric;
@@ -102,15 +102,6 @@ this.remove();
   
   if (!permissionGranted) return;
   
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
-  cx += dx;
-  cy += dy; 
-  cx = constrain(cx, 0, width);
-  cy = constrain(cy, 0, height);
-  noFill();
-  ellipse(cx, cy , 100 ,100);
-
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -122,8 +113,6 @@ this.remove();
   for (i = 0; i < shapesAmount2; i++) {
      drawRandomShape("ellipse");
   }
-
-  
 
  function drawRandomShape(choice) {
    // sizes for the shapes
@@ -143,11 +132,11 @@ this.remove();
    //showFabric= floor(showFabric);
   
  
-   //if (choice == "ellipse") {
-    // noStroke();
+   if (choice == "ellipse") {
+     noStroke();
      //img.mask(fabrics[showFabric]);
-    // fill(someColors1[randomColor]);
-    // ellipse(x, y, whc);
+     fill(someColors1[randomColor]);
+     ellipse(x, y, whc);
      
    }
 
@@ -157,7 +146,7 @@ this.remove();
      triangle(x, y, x, x, h, w)
    }*/
 
-  if (choice == "rectangle"){
+  else if (choice == "rectangle"){
      noStroke();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
@@ -169,11 +158,18 @@ this.remove();
   //background ('white');
 
 
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+  cx += dx;
+  cy += dy; 
+  cx = constrain(cx, 0, width);
+  cy = constrain(cy, 0, height);
   
+  ellipse(cx, cy , 100 ,100);
   
   //redraw();
 
-}
+}}
 
   
 function windowResized() {
