@@ -100,7 +100,7 @@ this.remove();
 
  function draw() {
 
-//Loop();
+
 
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
@@ -112,13 +112,24 @@ this.remove();
   ellipse(cx, cy , 100 ,100);
  
  
-  
+ 
+var i = 0;
 
-  
+// draw the shapes
+stroke(255, 50);
+for (i = 0; i < shapesAmount; i++) {
+   drawRandomShape("rectangle");
+}
+
+stroke (0, 50);
+for (i = 0; i < shapesAmount2; i++) {
+   drawRandomShape("ellipse");
+}
+ 
  
 
  function drawRandomShape(choice) {
- 
+noLoop();
    // sizes for the shapes
    x = random(width);
    y = random(height);
@@ -158,19 +169,8 @@ this.remove();
   }
 
 //if (!permissionGranted) return;
-noLoop();
-var i = 0
-// draw the shapes
-stroke(255, 50);
-for (i = 0; i < shapesAmount; i++) {
-   drawRandomShape("rectangle");
-}
 
-stroke (0, 50);
-for (i = 0; i < shapesAmount2; i++) {
-   drawRandomShape("ellipse");
-}
- 
+
 }
 
   //redraw();
