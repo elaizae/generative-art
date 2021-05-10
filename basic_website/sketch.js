@@ -103,7 +103,7 @@ this.remove();
 
 
  
-  
+
  
  
  
@@ -123,7 +123,7 @@ for (i = 0; i < shapesAmount2; i++) {
  
 
  function drawRandomShape(choice) {
-  noLoop();
+noLoop();
    // sizes for the shapes
    x = random(width);
    y = random(height);
@@ -163,20 +163,18 @@ for (i = 0; i < shapesAmount2; i++) {
   }
 
 //if (!permissionGranted) return;
-
-if (shapesAmount == 30){
-
-
-const dx = constrain(rotationY, -3,3);
+ function devicemoved() {
+   loop();
+  const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*2;
   cy += dy*2; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
-  //loop();
   fill(255, 204, 0);
   ellipse(cx, cy , 100 ,100);
-}
+
+ }
 
 }
 
