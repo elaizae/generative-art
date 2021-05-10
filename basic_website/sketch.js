@@ -128,7 +128,7 @@ this.remove();
   }
 
  function drawRandomShape(choice) {
-  //noLoop();
+  noLoop();
    // sizes for the shapes
    x = random(width);
    y = random(height);
