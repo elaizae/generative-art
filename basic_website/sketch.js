@@ -108,9 +108,9 @@ this.remove();
   cy += dy; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
-  
+  noFill();
   ellipse(cx, cy , 100 ,100);
-  
+
   var i = 0
   // draw the shapes
   stroke(255, 50);
