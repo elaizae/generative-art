@@ -173,7 +173,7 @@ this.remove();
   
   //redraw();
 
-}}
+}
 
   
 function windowResized() {
