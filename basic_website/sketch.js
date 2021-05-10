@@ -34,7 +34,7 @@ function setup() {
   // myCanvas.parent("frame");
   
   
-  //noLoop();
+  
   //background(255);
   
 
@@ -99,11 +99,8 @@ this.remove();
    
 
  function draw() {
-  
+  noLoop();
 
-
-
- function drawRandomShape(choice) {
   var i = 0
   // draw the shapes
   stroke(255, 50);
@@ -115,6 +112,8 @@ this.remove();
   for (i = 0; i < shapesAmount2; i++) {
      drawRandomShape("ellipse");
   }
+
+ function drawRandomShape(choice) {
    // sizes for the shapes
    x = random(width);
    y = random(height);
@@ -151,13 +150,11 @@ this.remove();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
    }
+  }
   
-  // shake to reload
-  // move the art work
-
-  //background ('white');
-
-
+if (!permissionGranted) return;
+   Loop();
+   fill('#FFE820');
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*2;
@@ -166,11 +163,7 @@ this.remove();
   cy = constrain(cy, 0, height);
   
   ellipse(cx, cy , 100 ,100);
-  
-  //redraw();
-
 }
- }
 
   //redraw();
 
