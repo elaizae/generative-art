@@ -35,7 +35,7 @@ function setup() {
   
   
   noLoop();
-  //background(255);
+  background (255);
   
 
   cx = width/1;
