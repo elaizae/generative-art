@@ -163,6 +163,7 @@ for (i = 0; i < shapesAmount2; i++) {
   }
 
 //if (!permissionGranted) return;
+
 if (shapesAmount == 30){
 
 
@@ -172,7 +173,7 @@ const dx = constrain(rotationY, -3,3);
   cy += dy*2; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
-  
+  //loop();
   fill(255, 204, 0);
   ellipse(cx, cy , 100 ,100);
 }
