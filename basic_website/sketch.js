@@ -99,10 +99,9 @@ this.remove();
    
 
  function draw() {
-
   if (!permissionGranted) return;
-  background (255);
-  var i = 0
+
+  /* var i = 0
   // draw the shapes
   stroke(255, 50);
   for (i = 0; i < shapesAmount; i++) {
@@ -144,13 +143,13 @@ this.remove();
    noStroke();
      //fill(someColors1[randomColor]);
      triangle(x, y, x, x, h, w)
-   }*/
+   }
 
   else {
      noStroke();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
-   }
+   }*/
   
   // shake to reload
   // move the art work
@@ -160,8 +159,8 @@ this.remove();
 
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
-  cx += dx;
-  cy += dy; 
+  cx += dx*3;
+  cy += dy*3; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
   
@@ -169,7 +168,7 @@ this.remove();
   
   //redraw();
 
-}}
+}
 
   
 function windowResized() {
