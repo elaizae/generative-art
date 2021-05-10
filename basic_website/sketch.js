@@ -3,9 +3,11 @@
  var x, y, w, h;
 
 // amount of shapes for each shape 
- var shapesAmount = 1;
- var shapesAmount2 = 0;
- var shapesAmount3 = 0;
+ //var shapesAmount = 30;
+ //var shapesAmount2 = 1;
+ //var shapesAmount3 = 0;
+
+
  //var pinkFabric;
  //var redFabric;
 
@@ -85,7 +87,7 @@ function setup() {
 
 this.remove();
  }
-
+//noLoop();
  }
 
 
@@ -99,31 +101,33 @@ this.remove();
    
 
  function draw() {
-
-
-
  
-
- 
- 
- 
-var i = 0;
+//var i = 0;
 
 // draw the shapes
+
+let stop = '';
+
 stroke(255, 50);
-for (i = 0; i < shapesAmount; i++) {
-   drawRandomShape("rectangle");
+for (let i = 0; i < 10; i++) {
+  
+drawRandomShape("rectangle");
+ 
 }
 
-stroke (0, 50);
-for (i = 0; i < shapesAmount2; i++) {
-   drawRandomShape("ellipse");
-}
- 
- 
+  //for (let i = 0; i < shapesAmount2; i++) {
+    // drawRandomShape("ellipse");
+     //const timesDrawn = i + 1;
+    
+  //}
+    
+
+
+
+
 
  function drawRandomShape(choice) {
-
+noLoop();
    // sizes for the shapes
    x = random(width);
    y = random(height);
@@ -139,32 +143,29 @@ for (i = 0; i < shapesAmount2; i++) {
 
    //showFabric= random(fabrics.length);
    //showFabric= floor(showFabric);
-  
- 
    if (choice == "ellipse") {
-     noStroke();
-     //img.mask(fabrics[showFabric]);
-     fill(someColors1[randomColor]);
-     ellipse(x, y, whc);
-     
-   }
-
-   /*else if (choice == "triangle") {
-   noStroke();
-     //fill(someColors1[randomColor]);
-     triangle(x, y, x, x, h, w)
-   }*/
-
-  else {
-     noStroke();
-     fill(someColors1[randomColor]);
-     rect(x, y, w, h);
-   }
+    noStroke();
+  
+    //img.mask(fabrics[showFabric]);
+    fill(someColors1[randomColor]);
+    ellipse(x, y, whc);
+   // const timesDrawn = pi + 1;
+    
   }
+  else {
+    noStroke();
+    
+   fill(someColors1[randomColor]);
+    rect(x, y, w, h);
+  
+  }
+  
+}
+ 
 
 //if (!permissionGranted) return;
  
-
+//loop();
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*2;
@@ -172,10 +173,12 @@ for (i = 0; i < shapesAmount2; i++) {
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
   fill(255, 204, 0);
+ 
   ellipse(cx, cy , 100 ,100);
 
  
 }
+
 
   //redraw();
 
