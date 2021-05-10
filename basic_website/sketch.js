@@ -99,9 +99,12 @@ this.remove();
    
 
  function draw() {
-  //if (!permissionGranted) return;
+  
 
-  /* var i = 0
+
+
+ function drawRandomShape(choice) {
+  var i = 0
   // draw the shapes
   stroke(255, 50);
   for (i = 0; i < shapesAmount; i++) {
@@ -112,8 +115,6 @@ this.remove();
   for (i = 0; i < shapesAmount2; i++) {
      drawRandomShape("ellipse");
   }
-
- function drawRandomShape(choice) {
    // sizes for the shapes
    x = random(width);
    y = random(height);
@@ -143,13 +144,13 @@ this.remove();
    noStroke();
      //fill(someColors1[randomColor]);
      triangle(x, y, x, x, h, w)
-   }
+   }*/
 
   else {
      noStroke();
      fill(someColors1[randomColor]);
      rect(x, y, w, h);
-   }*/
+   }
   
   // shake to reload
   // move the art work
@@ -169,8 +170,10 @@ this.remove();
   //redraw();
 
 }
+ }
 
-  
+  //redraw();
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
