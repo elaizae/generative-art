@@ -100,6 +100,7 @@ this.remove();
 
  function draw() {
 
+//Loop();
 
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
@@ -112,7 +113,7 @@ this.remove();
  
 
   
-  noLoop();
+
 
   var i = 0
   // draw the shapes
@@ -127,6 +128,7 @@ this.remove();
   }
 
  function drawRandomShape(choice) {
+  //noLoop();
    // sizes for the shapes
    x = random(width);
    y = random(height);
