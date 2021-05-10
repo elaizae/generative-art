@@ -38,8 +38,8 @@ function setup() {
   //background(255);
   
 
-  cx = width/2;
-  cy = height/2; 
+  cx = width/1;
+  cy = height/1; 
  
 
   // Sources for the motion permission code 
@@ -160,8 +160,8 @@ this.remove();
 
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
-  cx += dx*3;
-  cy += dy*3; 
+  cx += dx;
+  cy += dy; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
   
