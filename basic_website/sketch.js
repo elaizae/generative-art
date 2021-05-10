@@ -34,7 +34,7 @@ function setup() {
   // myCanvas.parent("frame");
   
   
-  //noLoop();
+  noLoop();
   //background(255);
   
 
@@ -159,8 +159,8 @@ this.remove();
 
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
-  cx += dx*10;
-  cy += dy*10; 
+  cx += dx*3;
+  cy += dy*3; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
   
