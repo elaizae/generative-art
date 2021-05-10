@@ -99,8 +99,9 @@ this.remove();
    
 
  function draw() {
-  if (!permissionGranted) return;
 
+  if (!permissionGranted) return;
+  background (255);
   var i = 0
   // draw the shapes
   stroke(255, 50);
