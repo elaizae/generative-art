@@ -1,5 +1,6 @@
+/* 👇 Start writing your p5.js code here */
 // this is the one 
-
+ var x, y, w, h;
 
 // amount of shapes for each shape 
  //var shapesAmount = 30;
@@ -11,28 +12,31 @@
  //var redFabric;
 
  // array of all my colors
-
-var x, y, w, h;
 someColors1 = ["#48B9C1", "#923456", "#EFC1D4 ", "#84C1F9", "#000", "#D3DDE5", "#094C67", "#46594c", "#3C2320",  "#d98e73", "#F2AD85", "#A49B8F", "#812F14", "#C9532A", "#DF5428"];
+
 let permissionGranted = false;
+
+
 let randomColor;
-let kx, ky;
 
+let cx, cy;
+//let pinkFabric;
+//let redFabric;
 
-/*let pinkFabric;
-let redFabric;
+//let fabrics = [ "pinkFabric", "redFabric"];
+//let showFabric;
 
-let fabrics = [ "pinkFabric", "redFabric"];
-let showFabric;
-
-function preload() {
-pinkFabric = loadImage('img/pink.JPG');
-redFabric = loadImage('img/red.JPG');
-}*/
+//function preload() {
+//pinkFabric = loadImage('img/pink.JPG');
+//redFabric = loadImage('img/red.JPG');
+//}
 
 function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
+  
+  
+  
   //background(255);
   
 
@@ -40,7 +44,7 @@ function setup() {
   cy = height/2; 
  
 
-  // Sources for the ios safari / browser motion permission code 
+  // Sources for the motion permission code 
   // I combined the code from here https://www.youtube.com/watch?v=AbB9ayaffTc with the code from here https://www.tutorialguruji.com/javascript/deviceshaken-and-devicemoved-not-working-on-p5-js-sketch/
    // device
    if (typeof(DeviceOrientationEvent) !== 'undefined' && typeof(DeviceOrientationEvent.requestPermission) === 'function') {
@@ -102,7 +106,7 @@ this.remove();
 
 // draw the shapes
 
-//let stop = '';
+let stop = '';
 
 stroke(255, 50);
 for (let i = 0; i < 21; i++) {
@@ -145,7 +149,7 @@ drawRandomShape("rectangle");
     //img.mask(fabrics[showFabric]);
     fill(someColors1[randomColor]);
     ellipse(x, y, whc);
-
+   // const timesDrawn = pi + 1;
     
   }
   else {
@@ -157,33 +161,31 @@ drawRandomShape("rectangle");
   }
   
 }
+ }
  
 
 //if (!permissionGranted) return;
  
 //loop();
- }
+ 
  
  loop();
- // rn it does it on click
 function mousePressed(){
-  // for it to not go off screen
-  const tx = constrain(rotationY, -3,3);
-  const ty = constrain(rotationX, -3,3);
-  //distance everytime
-  kx += tx*6;
-  ky += ty*6; 
-  kx = constrain(kx, 0, width);
-  ky = constrain(ky, 0, height);
-  // color
-  fill(255, 204, 0);
- //shape
-  ellipse(kx, ky , 25 , 25);
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
+  cx += dx*10;
+  cy += dy*10; 
+  cx = constrain(cx, 0, width);
+  cy = constrain(cy, 0, height);
+  fill(255, 0, 0);
+ 
+  ellipse(cx, cy , 25 , 25);
+
 }
 
-function deviceShaken(){
+/* function deviceShaken(){
   redraw();
-}
+}*/
  
 
   //redraw();
