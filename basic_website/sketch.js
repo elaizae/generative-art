@@ -184,7 +184,7 @@ function deviceMoved(){
   fill(255, 0, 0);
  
   ellipse(cx, cy , 15 , 15);
-
+  background(255);
 }
 
 /* function deviceShaken(){
