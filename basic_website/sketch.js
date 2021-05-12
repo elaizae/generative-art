@@ -168,15 +168,18 @@ let stop = '';
  
 //loop();
  
- 
+ // only make sure my circle moves
  loop();
 function deviceMoved(){
+  // dont go off the screen
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
-  cx += dx*10;
-  cy += dy*10; 
+  // circle speed 
+  cx += dx*3;
+  cy += dy*3; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
+  
   fill(255, 0, 0);
  
   ellipse(cx, cy , 25 , 25);
