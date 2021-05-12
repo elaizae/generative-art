@@ -37,7 +37,7 @@ function setup() {
   
   
   //background(255);
-  
+  setMoveThreshold(0.2);
 
   cx = width/2;
   cy = height/2; 
@@ -170,21 +170,21 @@ let stop = '';
  
  // only make sure my circle moves
  loop();
+ 
 function deviceMoved(){
-  // dont go off the screen
-  background(255);
+  
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   // circle speed 
   cx += dx;
   cy += dy; 
+  // dont go off the screen
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
 
   fill(255, 0, 0);
- 
   ellipse(cx, cy , 15 , 15);
-  background(255);
+  
 }
 
 /* function deviceShaken(){
