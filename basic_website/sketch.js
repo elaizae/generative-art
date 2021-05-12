@@ -108,12 +108,7 @@ this.remove();
 
 let stop = '';
 
-stroke(255, 50);
-for (let i = 0; i < 21; i++) {
-  
-drawRandomShape("rectangle");
- 
-}
+
 
   //for (let i = 0; i < shapesAmount2; i++) {
     // drawRandomShape("ellipse");
@@ -159,8 +154,13 @@ drawRandomShape("rectangle");
     rect(x, y, w, h);
   
   }
-  
-}
+ 
+ }
+ stroke(255, 50);
+ for (let i = 0; i < 21; i++) {
+ drawRandomShape("rectangle");
+ if (i > 21) break;
+ }
  }
  
 
@@ -170,7 +170,7 @@ drawRandomShape("rectangle");
  
  
  loop();
-function mousePressed(){
+function deviceMoved(){
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   cx += dx*10;
