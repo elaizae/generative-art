@@ -172,6 +172,7 @@ let stop = '';
  loop();
 function deviceMoved(){
   // dont go off the screen
+  background(255);
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   // circle speed 
