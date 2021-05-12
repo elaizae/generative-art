@@ -1,5 +1,4 @@
-/* 👇 Start writing your p5.js code here */
-// this is the one 
+// FINALLY ITS WORKS
  var x, y, w, h;
 
 // amount of shapes for each shape 
@@ -126,10 +125,11 @@ let stop = '';
    // sizes for the shapes
    x = random(width);
    y = random(height);
-   w = random(25, 300);
-   h = random(5, 300);
+   w = random(25, 200);
+   h = random(5, 200);
    //tw = random(25, 100);
    //th= random(25, 100);
+   // circle x and y
    whc =random(50, 100)
 
    // give the shapes a color from the string
@@ -175,14 +175,14 @@ function deviceMoved(){
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   // circle speed 
-  cx += dx*3;
-  cy += dy*3; 
+  cx += dx;
+  cy += dy; 
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
-  
+
   fill(255, 0, 0);
  
-  ellipse(cx, cy , 25 , 25);
+  ellipse(cx, cy , 15 , 15);
 
 }
 
