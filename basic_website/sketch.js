@@ -34,7 +34,7 @@ function setup() {
   var myCanvas = createCanvas(windowWidth, windowHeight);
   // myCanvas.parent("frame");
   
-  
+  setMoveThreshold(0.1);
   
   //background(255);
   
@@ -186,7 +186,7 @@ function deviceMoved(){
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
 
-  fill(someColors1);
+  fill(someColors1[randomColor]);
   Youcircle();
   
   
@@ -195,8 +195,9 @@ function deviceMoved(){
 }
 
 function mouseClicked(){
-  
-  fill(someColors1);
+  randomColor= random(someColors1.length);
+  randomColor= floor(randomColor);
+  fill(someColors1[randomColor]);
   
 
 }
