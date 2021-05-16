@@ -172,10 +172,7 @@ let stop = '';
  loop();
  
 function deviceMoved(){
-
-  var ellipse; 
-
-  ellipse.update();
+  
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   // circle speed 
@@ -186,19 +183,15 @@ function deviceMoved(){
   cy = constrain(cy, 0, height);
 
   fill(255, 0, 0);
-//
-
-  ellipse = ellipse(cx, cy , 15 , 15);
-
-  if (ellipse.intersects(drawRandomShape)) {
-    ellipse.changeColor();
-  }
+  ellipse(cx, cy , 15 , 15);
+  
 }
 
 
 function deviceShaken(){
-  redraw();
+  
   setMoveThreshold (50);
+  redraw();
 }
 
 /* function deviceShaken(){
