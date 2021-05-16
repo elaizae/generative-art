@@ -202,6 +202,14 @@ function mouseClicked(){
 
 }
 
+function mousePressed(){
+  randomColor= random(someColors1.length);
+  randomColor= floor(randomColor);
+  fill(someColors1[randomColor]);
+  
+
+}
+
 
 
 
