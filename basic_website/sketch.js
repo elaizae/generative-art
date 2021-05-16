@@ -171,13 +171,11 @@ let stop = '';
  // only make sure my circle moves
  loop();
 
- function deviceShaken(){
-  setMoveThreshold(50);
-  redraw();
-}
+ 
 
 function deviceMoved(){
   var Youcircle = ellipse(cx, cy , 15 , 15);
+  
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   // circle speed 
