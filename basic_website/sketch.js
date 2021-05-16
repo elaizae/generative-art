@@ -186,7 +186,7 @@ function deviceMoved(){
   cx = constrain(cx, 0, width);
   cy = constrain(cy, 0, height);
 
-  fill(someColors1[randomColor]);
+  fill(someColors1);
   Youcircle();
   
   
@@ -196,7 +196,7 @@ function deviceMoved(){
 
 function mouseClicked(){
   
-  fill(someColors1[randomColor]);
+  fill(someColors1);
   
 
 }
