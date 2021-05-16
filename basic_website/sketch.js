@@ -175,10 +175,10 @@ let stop = '';
  
 
 function deviceMoved(){
-  var Youcircle = rect(cx, cy , 15);
+  var Youcircle = rect(cx, cy , 15, 15);
  // dont go off the screen
-  const dx = constrain(rotationY, -2,6);
-  const dy = constrain(rotationX, -2,6);
+  const dx = constrain(rotationY, -3,3);
+  const dy = constrain(rotationX, -3,3);
   // circle speed 
   cx += dx*2;
   cy += dy*2; 
