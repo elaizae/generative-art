@@ -175,7 +175,7 @@ let stop = '';
  
 
 function deviceMoved(){
-  var Youcircle = rect(cx, cy , 15, 15);
+  var Youcircle = ellipse(cx, cy , 15);
  // dont go off the screen
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
@@ -183,8 +183,8 @@ function deviceMoved(){
   cx += dx*2;
   cy += dy*2; 
   // dont go off the screen
-  cx = constrain(cx, 0, cx, width);
-  cy = constrain(cy, 0, cy, height);
+  cx = constrain(cx, 0,  width);
+  cy = constrain(cy, 0, height);
 
   fill(someColors1[randomColor]);
   Youcircle();
