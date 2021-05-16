@@ -170,7 +170,12 @@ let stop = '';
  
  // only make sure my circle moves
  loop();
- 
+
+ function deviceShaken(){
+  setMoveThreshold(50);
+  redraw();
+}
+
 function deviceMoved(){
   
   const dx = constrain(rotationY, -3,3);
@@ -190,11 +195,7 @@ function deviceMoved(){
 
 
 
-function deviceShaken(){
-  setMoveThreshold(50);
-  redraw();
-}
- 
+
 
   //redraw();
 
