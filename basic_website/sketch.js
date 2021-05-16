@@ -170,11 +170,12 @@ let stop = '';
  
  // only make sure my circle moves
  loop();
+ var Youcircle = ellipse(cx, cy , 15 , 15);
 
  
 
 function deviceMoved(){
-  var Youcircle = ellipse(cx, cy , 15 , 15);
+  
 
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
@@ -191,7 +192,7 @@ function deviceMoved(){
 }
 
 function mouseClicked(){
-
+  Youcircle();
   fill(someColors1[randomColor]);
   
 }
