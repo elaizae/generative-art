@@ -175,7 +175,7 @@ let stop = '';
 
 function deviceMoved(){
   var Youcircle = ellipse(cx, cy , 15 , 15);
-  
+
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   // circle speed 
@@ -190,7 +190,7 @@ function deviceMoved(){
   
 }
 
-function mousePressed(){
+function mouseClicked(){
   Youcircle();
   fill(someColors1[randomColor]);
   
