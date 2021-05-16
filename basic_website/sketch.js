@@ -177,8 +177,8 @@ let stop = '';
 function deviceMoved(){
   var Youcircle = rect(cx, cy , 15);
  // dont go off the screen
-  const dx = constrain(rotationY, -3,3);
-  const dy = constrain(rotationX, -3,3);
+  const dx = constrain(rotationY, -2,2);
+  const dy = constrain(rotationX, -2,2);
   // circle speed 
   cx += dx*2;
   cy += dy*2; 
@@ -208,13 +208,6 @@ function mousePressed(){
   fill(someColors1[randomColor]);
   
 
-}
-
-
-
-function deviveShaken(){
-  setShakeThreshold(70);
-  redraw();
 }
 
   //redraw();
