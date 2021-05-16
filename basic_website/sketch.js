@@ -37,7 +37,7 @@ function setup() {
   
   
   //background(255);
-  setMoveThreshold(0.2);
+  
 
   cx = width/2;
   cy = height/2; 
@@ -189,9 +189,17 @@ function deviceMoved(){
   fill(someColors1[randomColor]);
   Youcircle();
   
+  
+  
+
 }
 
+function mouseClicked(){
+  
+  fill(someColors1[randomColor]);
+  
 
+}
 
 
 
