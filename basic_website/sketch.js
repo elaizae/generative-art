@@ -183,8 +183,8 @@ function deviceMoved(){
   cx += dx*2;
   cy += dy*2; 
   // dont go off the screen
-  cx = constrain(cx, 0, width);
-  cy = constrain(cy, 0, height);
+  cx = constrain(cx, 0, cy, width);
+  cy = constrain(cy, 0, cx, height);
 
   fill(someColors1[randomColor]);
   Youcircle();
