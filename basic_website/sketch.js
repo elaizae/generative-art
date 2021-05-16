@@ -176,9 +176,9 @@ let stop = '';
 
 function deviceMoved(){
   var Youcircle = rect(cx, cy , 15);
-
-  const dx = constrain(rotationY, -2,2);
-  const dy = constrain(rotationX, -2,2);
+ // dont go off the screen
+  const dx = constrain(rotationY, -4,4);
+  const dy = constrain(rotationX, -4,4);
   // circle speed 
   cx += dx*2.5;
   cy += dy*2.5; 
