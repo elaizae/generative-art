@@ -191,7 +191,7 @@ function deviceMoved(){
 }
 
 function mouseClicked(){
-  Youcircle();
+
   fill(someColors1[randomColor]);
   
 }
