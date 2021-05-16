@@ -190,9 +190,10 @@ function deviceMoved(){
 
 
 
-/* function deviceShaken(){
+function deviceShaken(){
+  setMoveThreshold(50);
   redraw();
-}*/
+}
  
 
   //redraw();
