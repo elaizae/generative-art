@@ -187,6 +187,11 @@ function deviceMoved(){
   
 }
 
+function deviceshaken(){
+  setMoveThreshold (50);
+  redraw();
+}
+
 /* function deviceShaken(){
   redraw();
 }*/
