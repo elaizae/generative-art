@@ -212,7 +212,10 @@ function mousePressed(){
 
 
 
-
+function deviveShaken(){
+  setShakeThreshold(70);
+  redraw();
+}
 
   //redraw();
 
