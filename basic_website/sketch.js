@@ -180,8 +180,8 @@ function deviceMoved(){
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
   // circle speed 
-  cx += dx*-1;
-  cy += dy*-1; 
+  cx += dx;
+  cy += dy; 
   // dont go off the screen
   cx = constrain(cx, 0,  width);
   cy = constrain(cy, 0, height);
