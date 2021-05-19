@@ -167,7 +167,11 @@ let stop = '';
 //if (!permissionGranted) return;
  
 //loop();
+function deviceshaken(){
+  redraw();
+   
  
+ }
  // only make sure my circle moves
  loop();
 
@@ -210,11 +214,7 @@ function mousePressed(){
 
 }
 
-function deviceshaken(){
- redraw();
-  
 
-}
 
   //redraw();
 
