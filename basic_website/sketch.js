@@ -125,8 +125,8 @@ let stop = '';
    // sizes for the shapes
    x = random(width);
    y = random(height);
-   w = random(25, 200);
-   h = random(5, 200);
+   w = random(25, 100);
+   h = random(5, 100);
    //tw = random(25, 100);
    //th= random(25, 100);
    // circle x and y
@@ -175,7 +175,7 @@ let stop = '';
  
 
 function deviceMoved(){
-  var Youcircle = ellipse(cx, cy , 15);
+  var Youcircle = ellipse(cx, cy , 10);
  // dont go off the screen
   const dx = constrain(rotationY, -3,3);
   const dy = constrain(rotationX, -3,3);
