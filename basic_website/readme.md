@@ -78,7 +78,6 @@ Final week, finishing my readme.
 Making sure my code properly works and 
 filming video presentation.
 
-`
 
 
 ## Bronnenlijst
