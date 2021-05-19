@@ -125,8 +125,8 @@ let stop = '';
    // sizes for the shapes
    x = random(width);
    y = random(height);
-   w = random(25, 100);
-   h = random(5, 100);
+   w = random(25, 150);
+   h = random(5, 150);
    //tw = random(25, 100);
    //th= random(25, 100);
    // circle x and y
@@ -185,7 +185,7 @@ function deviceMoved(){
   // dont go off the screen
   cx = constrain(cx, 0,  width);
   cy = constrain(cy, 0, height);
-
+setMoveThreshold(1);
   fill(someColors1[randomColor]);
   Youcircle();
   
