@@ -210,6 +210,12 @@ function mousePressed(){
 
 }
 
+function deviceshaken(){
+ redraw();
+  
+
+}
+
   //redraw();
 
 function windowResized() {
