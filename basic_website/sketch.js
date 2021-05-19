@@ -185,7 +185,7 @@ function deviceMoved(){
   // dont go off the screen
   cx = constrain(cx, 0,  width);
   cy = constrain(cy, 0, height);
-setMoveThreshold(0.6);
+
   fill(someColors1[randomColor]);
   Youcircle();
   
