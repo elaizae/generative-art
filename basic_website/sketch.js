@@ -157,7 +157,7 @@ let stop = '';
  
  }
  stroke(255, 50);
- for (let i = 0; i < 21; i++) {
+ for (let i = 0; i < 35; i++) {
  drawRandomShape("rectangle");
  if (i > 21) break;
  }
@@ -167,11 +167,7 @@ let stop = '';
 //if (!permissionGranted) return;
  
 //loop();
-function deviceShaken(){
-  redraw();
-   
- 
- }
+
  // only make sure my circle moves
  loop();
 
