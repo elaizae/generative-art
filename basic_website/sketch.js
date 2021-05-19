@@ -159,7 +159,7 @@ let stop = '';
  stroke(255, 50);
  for (let i = 0; i < 35; i++) {
  drawRandomShape("rectangle");
- if (i > 21) break;
+ if (i > 35) break;
  }
  }
  
